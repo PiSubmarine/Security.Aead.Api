@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 
-#include "PiSubmarine/Security/Aead/Api/IAeadMock.h"
+#include "PiSubmarine/Security/Aead/Api/IProviderMock.h"
 
 namespace PiSubmarine::Security::Aead::Api
 {
     TEST(AeadApiMockTest, AeadMockCanReturnCiphertext)
     {
-        IAeadMock aead;
+        IProviderMock aead;
         const Key key{.Value = {std::byte{0x01}}};
         const Nonce nonce{.Value = {std::byte{0x02}}};
         const Plaintext plaintext{.Value = {std::byte{0x03}}};

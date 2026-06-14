@@ -2,11 +2,11 @@
 
 #include <gmock/gmock.h>
 
-#include "PiSubmarine/Security/Aead/Api/IAead.h"
+#include "PiSubmarine/Security/Aead/Api/IProvider.h"
 
 namespace PiSubmarine::Security::Aead::Api
 {
-    class IAeadMock : public IAead
+    class IProviderMock : public IProvider
     {
     public:
         MOCK_METHOD(

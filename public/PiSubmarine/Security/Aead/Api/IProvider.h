@@ -9,10 +9,10 @@
 
 namespace PiSubmarine::Security::Aead::Api
 {
-    class IAead
+    class IProvider
     {
     public:
-        virtual ~IAead() = default;
+        virtual ~IProvider() = default;
 
         [[nodiscard]] virtual Error::Api::Result<Ciphertext> Seal(
             const Key& key,

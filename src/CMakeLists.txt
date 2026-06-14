@@ -6,7 +6,7 @@ add_library(${PISUBMARINE_MODULE_NAME}
         "../public/PiSubmarine/Security/Aead/Api/AssociatedData.h"
         "../public/PiSubmarine/Security/Aead/Api/Ciphertext.h"
         "../public/PiSubmarine/Security/Aead/Api/ErrorCode.h"
-        "../public/PiSubmarine/Security/Aead/Api/IAead.h"
+        "../public/PiSubmarine/Security/Aead/Api/IProvider.h"
         "../public/PiSubmarine/Security/Aead/Api/Key.h"
         "../public/PiSubmarine/Security/Aead/Api/Nonce.h"
         "../public/PiSubmarine/Security/Aead/Api/Plaintext.h")
