@@ -8,7 +8,7 @@ namespace PiSubmarine::Security::Aead::Api
     {
         IProviderMock aead;
         const Key key{.Value = {std::byte{0x01}}};
-        const Nonce nonce{.Value = {std::byte{0x02}}};
+        const ::PiSubmarine::Security::Api::Nonce nonce{.Value = {std::byte{0x02}}};
         const Plaintext plaintext{.Value = {std::byte{0x03}}};
         const AssociatedData associatedData{.Value = {std::byte{0x04}}};
         const Ciphertext expected{.Value = {std::byte{0x05}, std::byte{0x06}}};

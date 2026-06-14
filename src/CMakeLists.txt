@@ -8,10 +8,12 @@ add_library(${PISUBMARINE_MODULE_NAME}
         "../public/PiSubmarine/Security/Aead/Api/ErrorCode.h"
         "../public/PiSubmarine/Security/Aead/Api/IProvider.h"
         "../public/PiSubmarine/Security/Aead/Api/Key.h"
-        "../public/PiSubmarine/Security/Aead/Api/Nonce.h"
         "../public/PiSubmarine/Security/Aead/Api/Plaintext.h")
 target_include_directories(${PISUBMARINE_MODULE_NAME} PUBLIC "../public")
 PiSubmarineInitTarget(${PISUBMARINE_MODULE_NAME})
 
 PiSubmarineAddDependency("https://github.com/PiSubmarine/Error.Api.git" "")
 target_link_libraries(${PISUBMARINE_MODULE_NAME} PUBLIC PiSubmarine.Error.Api)
+
+PiSubmarineAddDependency("https://github.com/PiSubmarine/Security.Nonce.Api.git" "")
+target_link_libraries(${PISUBMARINE_MODULE_NAME} PUBLIC PiSubmarine.Security.Nonce.Api)

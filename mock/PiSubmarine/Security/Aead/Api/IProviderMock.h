@@ -12,12 +12,12 @@ namespace PiSubmarine::Security::Aead::Api
         MOCK_METHOD(
             (Error::Api::Result<Ciphertext>),
             Seal,
-            (const Key& key, const Nonce& nonce, const Plaintext& plaintext, const AssociatedData& associatedData),
+            (const Key& key, const ::PiSubmarine::Security::Api::Nonce& nonce, const Plaintext& plaintext, const AssociatedData& associatedData),
             (const, override));
         MOCK_METHOD(
             (Error::Api::Result<Plaintext>),
             Open,
-            (const Key& key, const Nonce& nonce, const Ciphertext& ciphertext, const AssociatedData& associatedData),
+            (const Key& key, const ::PiSubmarine::Security::Api::Nonce& nonce, const Ciphertext& ciphertext, const AssociatedData& associatedData),
             (const, override));
     };
 }

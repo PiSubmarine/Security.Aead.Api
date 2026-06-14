@@ -4,8 +4,8 @@
 #include "PiSubmarine/Security/Aead/Api/Ciphertext.h"
 #include "PiSubmarine/Security/Aead/Api/ErrorCode.h"
 #include "PiSubmarine/Security/Aead/Api/Key.h"
-#include "PiSubmarine/Security/Aead/Api/Nonce.h"
 #include "PiSubmarine/Security/Aead/Api/Plaintext.h"
+#include "PiSubmarine/Security/Api/Nonce.h"
 
 namespace PiSubmarine::Security::Aead::Api
 {
@@ -16,16 +16,6 @@ namespace PiSubmarine::Security::Aead::Api
         ASSERT_EQ(key.Value.size(), 2U);
         EXPECT_EQ(key.Value[0], std::byte{0x10});
         EXPECT_EQ(key.Value[1], std::byte{0x20});
-    }
-
-    TEST(AeadApiTest, NonceStoresOpaqueBytes)
-    {
-        const Nonce nonce{.Value = {std::byte{0xAA}, std::byte{0xBB}, std::byte{0xCC}}};
-
-        ASSERT_EQ(nonce.Value.size(), 3U);
-        EXPECT_EQ(nonce.Value[0], std::byte{0xAA});
-        EXPECT_EQ(nonce.Value[1], std::byte{0xBB});
-        EXPECT_EQ(nonce.Value[2], std::byte{0xCC});
     }
 
     TEST(AeadApiTest, PlaintextStoresOpaqueBytes)
